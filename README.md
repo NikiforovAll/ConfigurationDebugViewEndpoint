@@ -26,13 +26,8 @@ After:
 ```csharp
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapConfigurationDebugView("/config");
+    endpoints.MapConfigurationDebugView("/config", (options) => options.AllowDevelopmentOnly = true);
 });
 ```
 
-## TODO
-
-* core impl
-* options to control (?)
-  * enable for env
-* samples based on `dotnet/samples`
+For more examples, please see: [tests](.\Tests\ConfigurationDebugViewEndpoint.Test\EndpointRouteBuilderExtensionsTests.cs)
