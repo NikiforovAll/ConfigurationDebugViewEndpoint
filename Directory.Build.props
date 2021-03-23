@@ -1,0 +1,28 @@
+<Project>
+
+  <PropertyGroup Label="Build">
+    <LangVersion>latest</LangVersion>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <Authors>Oleksii Nikiforov</Authors>
+    <Company>Oleksii Nikiforov</Company>
+    <Copyright>Copyright © Oleksii Nikiforov. All rights Reserved</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/NikiforovAll/ConfigurationDebugViewEndpoint</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NikiforovAll/ConfigurationDebugViewEndpoint.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>https://github.com/NikiforovAll/ConfigurationDebugViewEndpoint/releases</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup Label="Package References">
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" PrivateAssets="all" Version="16.9.60" />
+    <PackageReference Include="MinVer" PrivateAssets="all" Version="2.5.0" />
+  </ItemGroup>
+
+</Project>

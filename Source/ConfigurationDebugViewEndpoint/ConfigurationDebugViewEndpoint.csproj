@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <Product>ConfigurationDebugViewEndpoint</Product>
+    <Description>A convenient extension method(s) for IEndpointRouteBuilder to add configuration debug view.</Description>
+    <PackageTags>configuration;endpoints;aspnetcore;aspnetcoremvc</PackageTags>
+  </PropertyGroup>
+
+</Project>
