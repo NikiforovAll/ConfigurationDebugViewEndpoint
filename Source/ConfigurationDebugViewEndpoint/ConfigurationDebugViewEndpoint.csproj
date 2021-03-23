@@ -9,5 +9,12 @@
     <Description>A convenient extension method(s) for IEndpointRouteBuilder to add configuration debug view.</Description>
     <PackageTags>configuration;endpoints;aspnetcore;aspnetcoremvc</PackageTags>
   </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup Label="Pacakge References">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
 
 </Project>

@@ -2,10 +2,10 @@
 
   <PropertyGroup Label="Build">
     <LangVersion>latest</LangVersion>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <!-- <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild> -->
+    <!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
     <AnalysisLevel>latest</AnalysisLevel>
     <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup Label="Package">
