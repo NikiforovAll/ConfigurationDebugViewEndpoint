@@ -30,4 +30,4 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-For more examples, please see: [tests](.\Tests\ConfigurationDebugViewEndpoint.Test\EndpointRouteBuilderExtensionsTests.cs)
+For more examples, please see: [tests](https://github.com/NikiforovAll/ConfigurationDebugViewEndpoint/tree/main/Tests)
