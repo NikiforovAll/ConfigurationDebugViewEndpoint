@@ -8,6 +8,8 @@ A convenient extension method(s) for IEndpointRouteBuilder to add configuration 
 
 The goal of this project is to provide a convenient way of adding something like this to a project:
 
+Before:
+
 ```csharp
 app.UseEndpoints(endpoints =>
 {
@@ -18,3 +20,19 @@ app.UseEndpoints(endpoints =>
     });
 });
 ```
+
+After:
+
+```csharp
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapConfigurationDebugView("/config");
+});
+```
+
+## TODO
+
+* core impl
+* options to control (?)
+  * enable for env
+* samples based on `dotnet/samples`

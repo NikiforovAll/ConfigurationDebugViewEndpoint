@@ -1,5 +1,6 @@
 namespace WebEmpty
 {
+    using ConfigurationDebugViewEndpoint.Extensions;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.Configuration;
@@ -20,11 +21,7 @@ namespace WebEmpty
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/config", async context =>
-                {
-                    var config = (Configuration as IConfigurationRoot).GetDebugView();
-                    await context.Response.WriteAsync(config);
-                });
+                endpoints.MapConfigurationDebugView();
             });
         }
     }
