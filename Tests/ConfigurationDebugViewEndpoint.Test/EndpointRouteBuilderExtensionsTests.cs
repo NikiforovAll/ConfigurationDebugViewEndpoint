@@ -81,5 +81,33 @@ namespace ConfigurationDebugViewEndpoint.Test
             Assert.Equal(expectedStatusCode, (int)response.StatusCode);
         }
 
+        [Theory]
+        [InlineData("Development", 200)]
+        [InlineData("Production", 404)]
+        public async Task DefaultOptions_Development_ConfigurationReturned(
+            string environment,
+            int expectedStatusCode)
+        {
+            var pattern = "/config";
+            using var host = new HostBuilder().ConfigureWebHost(builder =>
+            {
+                builder.ConfigureServices(services => services.AddRouting());
+                builder.Configure(app =>
+                {
+                    app.UseRouting();
+                    app.UseEndpoints(endpoints =>
+                        endpoints.MapConfigurationDebugView(pattern));
+                });
+                builder.UseTestServer()
+                    .UseEnvironment(environment);
+            })
+                .Build();
+
+            await host.StartAsync();
+            using var server = host.GetTestServer();
+            var response = await server.CreateClient().GetAsync($"http://example.com{pattern}");
+            Assert.Equal(expectedStatusCode, (int)response.StatusCode);
+        }
+
     }
 }
