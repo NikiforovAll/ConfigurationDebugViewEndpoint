@@ -9,6 +9,6 @@ namespace ConfigurationDebugViewEndpoint
         /// Gets or sets a value that controls whether to use <see cref="ConfigurationDebugViewMiddleware"/>
         /// exclusively on Development environment.
         /// </summary>
-        public bool AllowDevelopmentOnly { get; set; }
+        public bool AllowDevelopmentOnly { get; set; } = true;
     }
 }
